@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="王li权的博客">
 <meta property="og:description" content="使用hexo+github搭建免费个人博客详细教程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-17T08:27:43.180Z">
+<meta property="og:updated_time" content="2019-03-17T08:54:09.493Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo + github 搭建个人博客">
 <meta name="twitter:description" content="使用hexo+github搭建免费个人博客详细教程">
@@ -343,8 +343,6 @@
           
 
           
-            
-          
 
           
           
@@ -455,7 +453,7 @@
 <p>最终部署时生成：hexo\public\my-second-blog\index.html，但是它不会作为文章出现在博文目录。</p>
 <h4 id="3-12-1-写博客工具"><a href="#3-12-1-写博客工具" class="headerlink" title="3.12.1 写博客工具"></a>3.12.1 写博客工具</h4><p>我一种用的都是MWeb，也可以使用Typora</p>
 <h4 id="3-12-2-如何让博文列表不显示全部内容"><a href="#3-12-2-如何让博文列表不显示全部内容" class="headerlink" title="3.12.2. 如何让博文列表不显示全部内容"></a>3.12.2. 如何让博文列表不显示全部内容</h4><p>默认情况下，生成的博文目录会显示全部的文章内容，如何设置文章摘要的长度呢？</p>
-<p>答案是在合适的位置加上<a id="more"></a>即可</p>
+<p>答案是在合适的位置加上<code>&lt;!--more--&gt;</code>即可</p>
 <h2 id="4-绑定域名"><a href="#4-绑定域名" class="headerlink" title="4. 绑定域名"></a>4. 绑定域名</h2><p>这个是可选的，你不绑定域名肯定也是可以的，就用默认的 xxx.github.io 来访问，我是通过阿里云注册的域名，绑定域名分2种情况：带www和不带www的。</p>
 <p>域名配置最常见有2种方式，CNAME和A记录，CNAME填写域名，A记录填写IP，由于不带www方式只能采用A记录，所以必须先ping一下你的用户名.github.io的IP，然后到你的域名DNS设置页，将A记录指向你ping出来的IP，将CNAME指向你的用户名.github.io，这样可以保证无论是否添加www都可以访问</p>
 <p>然后到你的github项目根目录新建一个名为CNAME的文件（无后缀），里面填写你的域名，加不加www看你自己喜好，因为经测试：</p>
@@ -485,6 +483,13 @@
 <h2 id="6-设置主题"><a href="#6-设置主题" class="headerlink" title="6. 设置主题"></a>6. 设置主题</h2><p><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">next主题</a></p>
 <p><a href="https://theme-next.iissnan.com/" target="_blank" rel="noopener">NexT 使用文档</a></p>
 <p><a href="https://www.jianshu.com/p/9f0e90cc32c2" target="_blank" rel="noopener">Hexo-NexT配置超炫网页效果</a></p>
+<p>由于busuanzi(不蒜子)的网址更新,导致了使用Hexo Next主题时统计浏览数失效.</p>
+<p>不蒜子官网:<a href="http://ibruce.info/2015/04/04/busuanzi/" target="_blank" rel="noopener">http://ibruce.info/2015/04/04/busuanzi/</a></p>
+<p>解决方法:</p>
+<p>到hexo的themes文件夹下, 进入</p>
+<p>\themes\next\layout_third-party\analytics\busuanzi-counter.swig</p>
+<p>将src=“<a href="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js”" target="_blank" rel="noopener">https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js”</a></p>
+<p>修改为src=“<a href="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js”" target="_blank" rel="noopener">https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js”</a></p>
 <h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><p><a href="https://www.cnblogs.com/yinxiang/p/9237488.html" target="_blank" rel="noopener">利用GitHub搭建Hexo博客并开启HTTPS</a></p>
 <p><a href="https://www.jianshu.com/p/eded1dd2d794" target="_blank" rel="noopener">如何搭建个人博客 ？Hexo + GitHub 是一个不错的选择</a></p>
 
@@ -526,6 +531,22 @@
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/17/阅读目录/" rel="prev" title="阅读目录">
+                阅读目录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
       
@@ -549,10 +570,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -600,7 +617,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -611,7 +628,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -622,7 +639,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -731,7 +748,7 @@
 
         
 <div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   
     <span class="site-uv">
